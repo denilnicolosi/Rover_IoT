@@ -1,0 +1,1394 @@
+[
+    {
+        "id": "a7243e9b77faa088",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "33132d4a1ff57a32",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "10e78a89.5b4fd5",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "61285987.c20328",
+        "type": "ui_group",
+        "name": "Dati ricevuti",
+        "tab": "e7c46d5e.a1283",
+        "order": 1,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e7c46d5e.a1283",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "mi-videogame_asset",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ee73d3bee7b3407c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#850000",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#850000",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#850000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#d10000",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#850000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Dashboard rover",
+            "hideToolbar": "false",
+            "allowSwipe": "true",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c70e2a76122b1f23",
+        "type": "MySQLdatabase",
+        "name": "Database sensori",
+        "host": "localhost",
+        "port": "3306",
+        "db": "nodered",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "206b8f7299138a1a",
+        "type": "ui_tab",
+        "name": "Dati sensori",
+        "icon": "fa-database",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5eca0baf58a666e4",
+        "type": "ui_group",
+        "name": "Visualizzazione cronologia dati sensori",
+        "tab": "206b8f7299138a1a",
+        "order": 1,
+        "disp": true,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d395062cc009f406",
+        "type": "ui_group",
+        "name": "Comandi",
+        "tab": "e7c46d5e.a1283",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "9e86e340c4808801",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "5eca0baf58a666e4",
+        "order": 2,
+        "width": 24,
+        "height": 1
+    },
+    {
+        "id": "bc958bc5119d8946",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "61285987.c20328",
+        "order": 1,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "079c262d50d57c1c",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "61285987.c20328",
+        "order": 3,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "6938660141d514a9",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 2,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "cfe9230b0abe93a0",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "359f237b5b2d3d49",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "1da367492b5c338c",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "9c5afe74e5b43bd6",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "9fe2bb98d26e2edb",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 8,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "dd48528c81031728",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 12,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "645dba86c29ca0b6",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 13,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "158d52dc087de0bf",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "02f78fcfee82face",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 15,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "958340c4757d708d",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 17,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "761e3a8854988e48",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 18,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "2ad8db9ff2b07da2",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 19,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c1683e78ca0ad04e",
+        "type": "ui_spacer",
+        "z": "a7243e9b77faa088",
+        "name": "spacer",
+        "group": "d395062cc009f406",
+        "order": 20,
+        "width": 8,
+        "height": 1
+    },
+    {
+        "id": "9e58624.7faaba",
+        "type": "mqtt out",
+        "z": "a7243e9b77faa088",
+        "name": "movement_command",
+        "topic": "movement_command",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 500,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "21eae8f8.2971b8",
+        "type": "ui_chart",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "61285987.c20328",
+        "order": 9,
+        "width": 8,
+        "height": 4,
+        "label": "Temperatura [˚C] e Umidità [%]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1030,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "df37e6b7.64c1c8",
+        "type": "ui_gauge",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "61285987.c20328",
+        "order": 8,
+        "width": 8,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Tensione batteria [V]",
+        "label": "V",
+        "format": "{{value | number:2}}",
+        "min": 0,
+        "max": "13.00",
+        "colors": [
+            "#db0000",
+            "#eeff00",
+            "#1df500"
+        ],
+        "seg1": "8.25",
+        "seg2": "10.5",
+        "diff": false,
+        "className": "",
+        "x": 1000,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cba85db320266ddb",
+        "type": "ui_chart",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "61285987.c20328",
+        "order": 7,
+        "width": 8,
+        "height": 4,
+        "label": "Distanza [cm]",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 980,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc79021b.9a751",
+        "type": "debug",
+        "z": "a7243e9b77faa088",
+        "name": "mqtt_input",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 270,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1f15d258e9ca079a",
+        "type": "mqtt in",
+        "z": "a7243e9b77faa088",
+        "name": "Ricezione dati sensori",
+        "topic": "rover_output",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "10e78a89.5b4fd5",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "cc79021b.9a751",
+                "2274b6a7cc67a459",
+                "a159810435ba9679",
+                "a9ebb1d8e3b31d74",
+                "849f900f9e4a64e2",
+                "231f5b018a03603d",
+                "5369f3b7810a8650",
+                "e1239f2e98c26263",
+                "e1feb23b0416346c",
+                "5bb6ae312d282631"
+            ]
+        ]
+    },
+    {
+        "id": "2274b6a7cc67a459",
+        "type": "ui_text",
+        "z": "a7243e9b77faa088",
+        "group": "61285987.c20328",
+        "order": 11,
+        "width": 24,
+        "height": 2,
+        "name": "",
+        "label": "Data json raw",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 280,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "849f900f9e4a64e2",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Dati temperatura e umidità",
+        "func": "var msg1 = {};\nvar msg2 = {};\n\nmsg1.payload = msg.payload.temperature;\nmsg1.topic = 'Temperatura';\nmsg2.payload = msg.payload.humidity;\nmsg2.topic = 'Umidità';\n\nreturn [[msg1,msg2]]",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "21eae8f8.2971b8"
+            ]
+        ]
+    },
+    {
+        "id": "a159810435ba9679",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "tabella",
+        "func": "msg.payload=[\n{\n    \"Timestamp (unixtime)[s]\" :msg.payload.unixtime,\n    \"Temperatura [˚C]\": msg.payload.temperature,\n    \"Accelerazione X[m/s^2]\": msg.payload.acceleration.x,\n    \"Accelerazione Y[m/s^2]\": msg.payload.acceleration.y,\n    \"Accelerazione Z[m/s^2]\": msg.payload.acceleration.z,\n    \"Rotazione X[rad/s]\": msg.payload.rotation.x,\n    \"Rotazione Y[rad/s]\": msg.payload.rotation.y,\n    \"Rotazione Z[rad/s]\": msg.payload.rotation.z,\n    \"Umidità [%]\" : msg.payload.humidity,\n    \"Batteria [V]\": msg.payload.battery.voltage,\n    \"Distanza [cm]\": msg.payload.distance    \n}];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 520,
+        "wires": [
+            [
+                "78d5ad2d3908b0c6"
+            ]
+        ]
+    },
+    {
+        "id": "231f5b018a03603d",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Dati distanza",
+        "func": "msg.payload =  msg.payload.distance;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 420,
+        "wires": [
+            [
+                "cba85db320266ddb"
+            ]
+        ]
+    },
+    {
+        "id": "5369f3b7810a8650",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Dati tensione batteria",
+        "func": "msg.payload =  msg.payload.battery.voltage;\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 360,
+        "wires": [
+            [
+                "df37e6b7.64c1c8"
+            ]
+        ]
+    },
+    {
+        "id": "a9ebb1d8e3b31d74",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Inserimento dati nel database",
+        "func": "msg.topic = \"INSERT INTO`nodered`.`sensors_history` (`distance`,`acceleration_x`,`acceleration_y`,`acceleration_z`,`rotation_x`,`rotation_y`,`rotation_z`,`timestamp`,`temperature`,`humidity`,`battery_voltage`)\" +\n    \" VALUES (\" +\n    msg.payload.distance+\",\"+\n    msg.payload.acceleration.x + \",\" +\n    msg.payload.acceleration.y + \",\" +\n    msg.payload.acceleration.z + \",\" +\n    msg.payload.rotation.x + \",\" +\n    msg.payload.rotation.y + \",\" +\n    msg.payload.rotation.z + \",\" +\n    \" FROM_UNIXTIME(\" + msg.payload.unixtime + \"),\" +\n    msg.payload.temperature + \",\" +\n    msg.payload.humidity + \",\" +\n    msg.payload.battery.voltage +\n    \");\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 580,
+        "wires": [
+            [
+                "aa5002f4dc42c582"
+            ]
+        ]
+    },
+    {
+        "id": "f8d0e51bad6cc58c",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "5eca0baf58a666e4",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "label": "Aggiorna visualizzazione storico",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "SELECT      `sensors_history`.`id` AS `ID`,     `sensors_history`.`distance` AS `Distanza [cm]`,     `sensors_history`.`acceleration_x` AS `Accelerazione X [m/s^2]`,     `sensors_history`.`acceleration_y` AS `Accelerazione Y [m/s^2]`,     `sensors_history`.`acceleration_z` AS `Accelerazione Z [m/s^2]`,     `sensors_history`.`rotation_x` AS `Rotazione X [rad/s]`,     `sensors_history`.`rotation_y` AS `Rotazione Y [rad/s]`,     `sensors_history`.`rotation_z` AS `Rotazione Z [rad/s]`,     `sensors_history`.`timestamp` AS `Timestamp (unixtime) [s]`,     `sensors_history`.`temperature` AS `Temperatura [˚C]`,     `sensors_history`.`humidity` AS `Umidità [%]`,     `sensors_history`.`battery_voltage` AS `Batteria [V]` FROM `nodered`.`sensors_history` ORDER BY ID;",
+        "topicType": "str",
+        "x": 170,
+        "y": 800,
+        "wires": [
+            [
+                "0d1c25a5aac6433e"
+            ]
+        ]
+    },
+    {
+        "id": "aa5002f4dc42c582",
+        "type": "mysql",
+        "z": "a7243e9b77faa088",
+        "mydb": "c70e2a76122b1f23",
+        "name": "Database sensori",
+        "x": 955,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "0d1c25a5aac6433e",
+        "type": "mysql",
+        "z": "a7243e9b77faa088",
+        "mydb": "c70e2a76122b1f23",
+        "name": "Database sensori",
+        "x": 355,
+        "y": 800,
+        "wires": [
+            [
+                "4a8875aa5a469c98",
+                "0cd59214e4c2a4d9"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "4a8875aa5a469c98",
+        "type": "ui_table",
+        "z": "a7243e9b77faa088",
+        "group": "5eca0baf58a666e4",
+        "name": "Valori",
+        "order": 3,
+        "width": 30,
+        "height": 13,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 570,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "6fd3f1b28b09aab2",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "button up",
+        "group": "d395062cc009f406",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-arrow-up",
+        "payload": "0",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 1020,
+        "wires": [
+            [
+                "9e58624.7faaba",
+                "50c85b1af33ddb77"
+            ]
+        ]
+    },
+    {
+        "id": "634099d57dd03544",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "button down",
+        "group": "d395062cc009f406",
+        "order": 16,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-arrow-down",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1060,
+        "wires": [
+            [
+                "9e58624.7faaba",
+                "50c85b1af33ddb77"
+            ]
+        ]
+    },
+    {
+        "id": "3e62f54e61cee18f",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "button right",
+        "group": "d395062cc009f406",
+        "order": 11,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-arrow-right",
+        "payload": "2",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1180,
+        "wires": [
+            [
+                "9e58624.7faaba",
+                "50c85b1af33ddb77"
+            ]
+        ]
+    },
+    {
+        "id": "6e982085cc0b2a5a",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "button left",
+        "group": "d395062cc009f406",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-arrow-left",
+        "payload": "3",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 1140,
+        "wires": [
+            [
+                "9e58624.7faaba",
+                "50c85b1af33ddb77"
+            ]
+        ]
+    },
+    {
+        "id": "1a374a49560a01a0",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "button stop",
+        "group": "d395062cc009f406",
+        "order": 10,
+        "width": 2,
+        "height": 2,
+        "passthru": false,
+        "label": "",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-stop",
+        "payload": "4",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 1100,
+        "wires": [
+            [
+                "9e58624.7faaba",
+                "50c85b1af33ddb77"
+            ]
+        ]
+    },
+    {
+        "id": "ea3dcc0ff5824e1e",
+        "type": "ui_slider",
+        "z": "a7243e9b77faa088",
+        "name": "speed",
+        "label": "Speed",
+        "tooltip": "",
+        "group": "d395062cc009f406",
+        "order": 21,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "speed",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 90,
+        "y": 1400,
+        "wires": [
+            [
+                "e2cfd0a57f217e79",
+                "f599f4318fb3a83d"
+            ]
+        ]
+    },
+    {
+        "id": "e3a98664e849e96c",
+        "type": "inject",
+        "z": "a7243e9b77faa088",
+        "name": "RTC sync",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1520,
+        "wires": [
+            [
+                "3fd816f8da8aba45",
+                "4537e8fd533f7e38"
+            ]
+        ]
+    },
+    {
+        "id": "7306c6af51b6ba99",
+        "type": "ui_switch",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "label": "Modalità automatica",
+        "tooltip": "",
+        "group": "d395062cc009f406",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "mode",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 140,
+        "y": 1280,
+        "wires": [
+            [
+                "09c0ac4eed78f37a",
+                "821e77d4d189749d"
+            ]
+        ]
+    },
+    {
+        "id": "28372de98cea2f11",
+        "type": "inject",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "SELECT      `sensors_history`.`id` AS `ID`,     `sensors_history`.`distance` AS `Distanza [cm]`,     `sensors_history`.`acceleration_x` AS `Accelerazione X [m/s^2]`,     `sensors_history`.`acceleration_y` AS `Accelerazione Y [m/s^2]`,     `sensors_history`.`acceleration_z` AS `Accelerazione Z [m/s^2]`,     `sensors_history`.`rotation_x` AS `Rotazione X [rad/s]`,     `sensors_history`.`rotation_y` AS `Rotazione Y [rad/s]`,     `sensors_history`.`rotation_z` AS `Rotazione Z [rad/s]`,     `sensors_history`.`timestamp` AS `Timestamp (unixtime) [s]`,     `sensors_history`.`temperature` AS `Temperatura [˚C]`,     `sensors_history`.`humidity` AS `Umidità [%]`,     `sensors_history`.`battery_voltage` AS `Batteria [V]` FROM `nodered`.`sensors_history` ORDER BY ID;",
+        "payload": "on",
+        "payloadType": "msg",
+        "x": 250,
+        "y": 860,
+        "wires": [
+            [
+                "0d1c25a5aac6433e"
+            ]
+        ]
+    },
+    {
+        "id": "3fd816f8da8aba45",
+        "type": "mqtt out",
+        "z": "a7243e9b77faa088",
+        "name": "rtc_sync_unixtime",
+        "topic": "rtc_sync_unixtime",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 490,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "e2cfd0a57f217e79",
+        "type": "mqtt out",
+        "z": "a7243e9b77faa088",
+        "name": "speed",
+        "topic": "speed",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 450,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "09c0ac4eed78f37a",
+        "type": "mqtt out",
+        "z": "a7243e9b77faa088",
+        "name": "function_mode_auto",
+        "topic": "function_mode_auto",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "10e78a89.5b4fd5",
+        "x": 500,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "0cd59214e4c2a4d9",
+        "type": "debug",
+        "z": "a7243e9b77faa088",
+        "name": "debug table",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "50c85b1af33ddb77",
+        "type": "debug",
+        "z": "a7243e9b77faa088",
+        "name": "movement_command",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "821e77d4d189749d",
+        "type": "debug",
+        "z": "a7243e9b77faa088",
+        "name": "function_mode_auto",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "f599f4318fb3a83d",
+        "type": "debug",
+        "z": "a7243e9b77faa088",
+        "name": "speed",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 450,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "4537e8fd533f7e38",
+        "type": "debug",
+        "z": "a7243e9b77faa088",
+        "name": "rtc_sync_unixtime",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "78d5ad2d3908b0c6",
+        "type": "ui_table",
+        "z": "a7243e9b77faa088",
+        "group": "61285987.c20328",
+        "name": "Valori",
+        "order": 10,
+        "width": 24,
+        "height": 2,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 950,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "89fb581f464b3a9f",
+        "type": "ui_chart",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "61285987.c20328",
+        "order": 6,
+        "width": 12,
+        "height": 5,
+        "label": "Accelerazione [m/s^2]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f33d7bed0900129",
+        "type": "ui_chart",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "61285987.c20328",
+        "order": 5,
+        "width": 12,
+        "height": 5,
+        "label": "Rotazione [rad/s]",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 990,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4fe23f3408237ac9",
+        "type": "ui_text",
+        "z": "a7243e9b77faa088",
+        "group": "61285987.c20328",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Timestamp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e1239f2e98c26263",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Dati accelerazione",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.payload = msg.payload.acceleration.x;\nmsg1.topic = 'X';\nmsg2.payload = msg.payload.acceleration.y;\nmsg2.topic = 'Y';\nmsg3.payload = msg.payload.acceleration.z;\nmsg3.topic = 'Z';\n\nreturn [[msg1,msg2,msg3]]\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 240,
+        "wires": [
+            [
+                "89fb581f464b3a9f"
+            ]
+        ]
+    },
+    {
+        "id": "e1feb23b0416346c",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Dati rotazione",
+        "func": "var msg1 = {};\nvar msg2 = {};\nvar msg3 = {};\n\nmsg1.payload = msg.payload.rotation.x;\nmsg1.topic = 'X';\nmsg2.payload = msg.payload.rotation.y;\nmsg2.topic = 'Y';\nmsg3.payload = msg.payload.rotation.z;\nmsg3.topic = 'Z';\n\nreturn [[msg1,msg2,msg3]]",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 180,
+        "wires": [
+            [
+                "7f33d7bed0900129"
+            ]
+        ]
+    },
+    {
+        "id": "5bb6ae312d282631",
+        "type": "function",
+        "z": "a7243e9b77faa088",
+        "name": "Dati timestamp",
+        "func": "msg.payload = new Date(msg.payload.unixtime*1000).toLocaleString();\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 120,
+        "wires": [
+            [
+                "4fe23f3408237ac9"
+            ]
+        ]
+    },
+    {
+        "id": "7a98c128465dd898",
+        "type": "ui_button",
+        "z": "a7243e9b77faa088",
+        "name": "",
+        "group": "61285987.c20328",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Pulisci grafici",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "topicType": "str",
+        "x": 690,
+        "y": 60,
+        "wires": [
+            [
+                "7f33d7bed0900129",
+                "89fb581f464b3a9f",
+                "21eae8f8.2971b8",
+                "cba85db320266ddb"
+            ]
+        ]
+    }
+]
