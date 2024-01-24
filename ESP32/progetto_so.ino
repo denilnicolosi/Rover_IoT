@@ -36,6 +36,9 @@ UltraSonicDistanceSensor distanceSensor(HCSR04_TRIGGER_PIN, HCSR04_ECHO_PIN);
 StaticJsonDocument<250> docOutput; // Utilizzato il tool https://arduinojson.org/v6/assistant per calcolare la capacità del documento json.
 StaticJsonDocument<250> docInput;
 
+//definizione del semaforo
+SemaphoreHandle_t xMutex;
+
 // Variabili ed enum utilizzati
 sensors_event_t a, g, temp;
 
@@ -57,7 +60,7 @@ void taskFunctionMode(void *pvParameters){
   while (1){
 
     if(function_mode_selected == AUTO){
-            
+      xSemaphoreTake(xMutex, portMAX_DELAY);      
       if(distanceSensor.measureDistanceCm()<=SAFETY_DISTANCE_CM){
         r_motor.stop();
         l_motor.stop();
@@ -72,19 +75,22 @@ void taskFunctionMode(void *pvParameters){
       }else{
         r_motor.forward();
         l_motor.forward();    
-      }      
+      } 
+      xSemaphoreGive(xMutex);     
     }
     else
     {  
       switch(command_received){
         case FORWARD:
-           if(distanceSensor.measureDistanceCm()<=SAFETY_DISTANCE_CM){            
+            xSemaphoreTake(xMutex, portMAX_DELAY);
+            if(distanceSensor.measureDistanceCm()<=SAFETY_DISTANCE_CM){            
               r_motor.stop();
               l_motor.stop(); 
             }else{              
               r_motor.forward();
               l_motor.forward();
-            }          
+            } 
+            xSemaphoreGive(xMutex);         
           break;
         case BACKWARD:
           r_motor.backward();
@@ -158,8 +164,9 @@ void taskRiceviDati(void *pvParameters){
 void taskInvioDati(void *pvParameters){
   while (1){    
     mpu.getEvent(&a, &g, &temp);   
-
+    xSemaphoreTake(xMutex, portMAX_DELAY);
     docOutput["distance"]=distanceSensor.measureDistanceCm();
+    xSemaphoreGive(xMutex);
     docOutput["acceleration"]["x"]=a.acceleration.x;
     docOutput["acceleration"]["y"]=a.acceleration.y;
     docOutput["acceleration"]["z"]=a.acceleration.z;
@@ -195,6 +202,8 @@ void setup(void) {
   command_received=STOP;
   l_motor.setSpeed(70);
   r_motor.setSpeed(70);
+
+  xMutex = xSemaphoreCreateMutex();
   
   xTaskCreate(taskRiceviDati, "Task ricezione dati", 5000, NULL, 2, NULL);  
   xTaskCreate(taskFunctionMode, "Task modalità di funzionamento", 5000, NULL, 3, NULL);
