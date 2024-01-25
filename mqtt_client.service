@@ -1,0 +1,13 @@
+[Unit]
+Description= Service mqtt client
+After=multi-user.target
+
+[Service]
+User=denil
+Restart=on-failure
+RestartSec=30
+Type=idle
+ExecStart=/usr/bin/python /home/denil/mqtt_client/mqtt_client.py
+
+[Install]
+WantedBy=multi-user.target

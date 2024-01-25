@@ -57,21 +57,21 @@ enum command{
 
 
 void taskFunctionMode(void *pvParameters){
-  while (1){
-
+  TickType_t xLastWakeTime = xTaskGetTickCount();
+  while (1){    
     if(function_mode_selected == AUTO){
       xSemaphoreTake(xMutex, portMAX_DELAY);      
       if(distanceSensor.measureDistanceCm()<=SAFETY_DISTANCE_CM){
         r_motor.stop();
         l_motor.stop();
-        delay(500);        
+        vTaskDelay(500 / portTICK_PERIOD_MS);      
         //random rotate
         r_motor.forward();
         l_motor.backward();
-        delay(random(300,800));
+        vTaskDelay(random(300,800) / portTICK_PERIOD_MS);
         r_motor.stop();
         l_motor.stop();
-        delay(500); 
+        vTaskDelay(500 / portTICK_PERIOD_MS);  
       }else{
         r_motor.forward();
         l_motor.forward();    
@@ -115,12 +115,13 @@ void taskFunctionMode(void *pvParameters){
           
       }      
     }
-    vTaskDelay(DELAY_FUNCTION_MODE_MS / portTICK_PERIOD_MS);
+    vTaskDelayUntil( &xLastWakeTime, pdMS_TO_TICKS(DELAY_FUNCTION_MODE_MS));    
   }
 }
 
 
 void taskRiceviDati(void *pvParameters){
+  TickType_t xLastWakeTime = xTaskGetTickCount();
   while (1){    
     if(Serial.available()){
       DeserializationError err = deserializeJson(docInput, Serial);
@@ -157,11 +158,12 @@ void taskRiceviDati(void *pvParameters){
           Serial.read();
       }
     }
-    vTaskDelay(DELAY_RECEIVE_DATA_MS / portTICK_PERIOD_MS);    
+    vTaskDelayUntil( &xLastWakeTime, pdMS_TO_TICKS(DELAY_RECEIVE_DATA_MS));       
   }
 }
 
 void taskInvioDati(void *pvParameters){
+  TickType_t xLastWakeTime = xTaskGetTickCount();
   while (1){    
     mpu.getEvent(&a, &g, &temp);   
     xSemaphoreTake(xMutex, portMAX_DELAY);
@@ -180,7 +182,7 @@ void taskInvioDati(void *pvParameters){
     serializeJson(docOutput, Serial);
     Serial.println();
 
-    vTaskDelay(DELAY_SEND_SENSOR_DATA_MS / portTICK_PERIOD_MS);
+    vTaskDelayUntil( &xLastWakeTime, pdMS_TO_TICKS(DELAY_SEND_SENSOR_DATA_MS)); 
   }
 }
 
